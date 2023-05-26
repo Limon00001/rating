@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background-color: hsl(216, 12%, 8%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* min-height: 100vh; */
+}
+
+div .col {
+    display: inline-block;
+    background-color: hsl(210, 16%, 18%);
+    width: 27%;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, hsl(213, 16%, 13%), hsl(212, 16%, 16%));
+    padding: 25px;
+}
+
+.thank_row .col_a {
+    margin-top: 250px;
+    display: inline-block;
+    background-color: hsl(210, 16%, 18%);
+    width: 27%;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, hsl(213, 16%, 13%), hsl(212, 16%, 16%));
+    padding: 25px;
+}
+
+p {
+    color: hsl(217, 12%, 63%);
+}
+
+img {
+    width: 100%;
+}
+
+.card-body img {
+    width: 37px;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: hsl(213, 19%, 18%);
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    margin-top: 10px;
+}
+
+.card-img {
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    padding-left: 16px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -20px;
+}
+
+ul li .btn {
+    margin-top: 1rem;
+    /* font-size: -5px; */
+}
+
+ul,
+button {
+    font-size: 22px;
+}
+
+button {
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: hsl(213, 19%, 18%);
+    width: 3rem;
+    height: 3rem;
+    color: hsl(217, 12%, 63%);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding-top: 0.3rem;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+.btn:focus {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+.submit-btn {
+    background-color: hsl(25, 97%, 53%);
+    padding: 0.625rem 2rem 0.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 1rem;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.submit-btn:hover {
+    background-color: #fff;
+    color: hsl(25, 97%, 53%);
+}
+
+.thank_row {
+    display: none;
+    position: relative;
+    margin-top: 250px;
+    margin-left: 80%;
+    border-radius: 10px;
+    height: 100vh;
+    width: 100%;
+}
+
+#ratings {
+    margin-top: 25px;
+    margin-left: 42px;
+    margin-right: 36px;
+    border-radius: 12px;
+    background-color: hsl(212, 15%, 20%);
+    color: hsl(25, 91%, 62%);
+}
+
+.smile {
+    margin-left: 595px;
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle closest-side, hsl(25, 91%, 62%) 99%, transparent) -35px 42px/calc(100% - 15px) 15px repeat-x,
+        linear-gradient(hsl(216, 12%, 8%), hsl(216, 12%, 8%)) top/100% 50px no-repeat,
+        radial-gradient(farthest-side, transparent calc(99% - 15px), hsl(25, 91%, 62%) calc(100% - 15px));
+    position: relative;
+}
+
+.smile:before,
+.smile:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 7px);
+    height: 15px;
+    background: radial-gradient(circle closest-side, hsl(25, 91%, 62%) 99%, transparent) -7.5px 0/200% 100%;
+    transform: rotate(calc(var(--o, 0deg) - 50deg));
+
+}
+
+.smile:after {
+    --o: -80deg;
+}
+
+.smile:hover {
+    animation: rotateS 1.2s linear;
+}
+
+.smile:hover:before,
+.smile:hover:after {
+    animation: inherit;
+    animation-name: rotateE;
+}
+
+@keyframes rotateS {
+    50% {
+        transform: rotate(360deg);
+        background-size: calc(90% - 15px) 15px, 100% 30px, auto;
+        background-position: -25px 22px, top, 0 0;
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+
+@keyframes rotateE {
+
+    30%,
+    70% {
+        transform: rotate(calc(var(--o, 0deg) - 180deg));
+    }
+}
